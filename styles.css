@@ -1,0 +1,130 @@
+/* Base Styles */
+:root {
+    --primary-color: #2A2A72;
+    --secondary-color: #009FFD;
+    --text-color: #333;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 120px 0 80px;
+}
+
+.profile-img {
+    width: 230px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+.section-title {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    position: relative;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--secondary-color);
+}
+
+/* Education Timeline */
+.timeline-item {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -15px;
+    width: 30px;
+    height: 30px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+}
+
+/* Project Cards */
+.project-card {
+    transition: var(--transition);
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.tech-badge {
+    background: var(--primary-color);
+    color: white;
+    margin: 5px;
+}
+
+/* Skills Section */
+.skill-item {
+    text-align: center;
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+/* Contact Section */
+.contact-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+    margin: 0 15px;
+}
+
+.contact-icon:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}

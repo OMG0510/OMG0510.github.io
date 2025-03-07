@@ -54,13 +54,13 @@ body {
     display: inline-block;
     position: relative;
     animation: 
-        typing 3.5s steps(25, end) forwards,
-        blink-caret 0.75s step-end infinite;
+        typing 7.5s steps(50, end),
+        blink-caret 0.75s;
 }
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 40% }
 }
 
 @keyframes blink-caret {
@@ -141,6 +141,7 @@ body {
 
 .project-card:hover {
     transform: translateY(-10px);
+    background-color:skyblue;
 }
 
 .tech-badge {
@@ -204,6 +205,18 @@ body.dark-mode .project-card,
 body.dark-mode .timeline-item {
     background: #1E1E1E;
     color: white;
+    border: 1px;
+    border-color: white;
+}
+
+body.dark-mode .pro
+{
+    background-color:#1E1E1E ;
+}  
+
+body.dark-mode .contact
+{
+    background-color:#1E1E1E ;
 }
 
 body.dark-mode .timeline-item:hover {

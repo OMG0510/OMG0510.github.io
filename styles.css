@@ -133,7 +133,7 @@ body {
 /* Project Cards */
 .project-card {
     transition: var(--transition);
-    border: none;
+    border: 1px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     height: 100%;
     border-radius: 15px;
@@ -141,7 +141,10 @@ body {
 
 .project-card:hover {
     transform: translateY(-10px);
-    background-color:skyblue;
+    background: linear-gradient(45deg, 
+        rgba(var(--primary-color-rgb), 0.05) 0%,
+        rgba(var(--secondary-color-rgb), 0.02) 100%
+    );
 }
 
 .tech-badge {
@@ -201,7 +204,10 @@ body.dark-mode .navbar-brand {
     color: #fff !important;
 }
 
-body.dark-mode .project-card,
+body.dark-mode .project-card {
+    background:rgba(18, 18, 18, 0.95);
+    color:white;
+}
 body.dark-mode .timeline-item {
     background: #1E1E1E;
     color: white;
@@ -245,6 +251,7 @@ body.dark-mode .timeline-item:hover {
     
     .skill-item {
         padding: 15px;
+        background-color:white;
     }
     
     .skill-icon {

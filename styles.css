@@ -38,8 +38,8 @@ body {
 }
 
 .profile-img {
-    width: 230px;
-    height: 250px;
+    width: 235px;
+    height: 275px;
     border-radius: 50%;
     border: 5px solid white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -54,8 +54,8 @@ body {
     display: inline-block;
     position: relative;
     animation: 
-        typing 7.5s steps(50, end),
-        blink-caret 0.75s;
+        typing 4s steps(50, end),
+        blink-caret 0.5s;
 }
 
 @keyframes typing {
@@ -158,8 +158,9 @@ body {
     text-align: center;
     padding: 20px;
     transition: var(--transition);
-    border: 2px solid transparent;
+    border: 1px;
     border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .skill-item:hover {
@@ -204,6 +205,10 @@ body.dark-mode .navbar-brand {
     color: #fff !important;
 }
 
+body.dark-mode .hero-section{
+    background:rgba(30, 30, 30, 0.8) ;
+}
+
 body.dark-mode .project-card {
     background:rgba(18, 18, 18, 0.95);
     color:white;
@@ -226,6 +231,17 @@ body.dark-mode .contact
 }
 
 body.dark-mode .timeline-item:hover {
+    background: linear-gradient(45deg, 
+        rgba(187, 134, 252, 0.08) 0%,
+        rgba(3, 218, 198, 0.04) 100%
+    );
+}
+
+body.dark-mode .skill-item{
+    background:#1E1E1E;
+}
+
+body.dark-mode .skill-item:hover{
     background: linear-gradient(45deg, 
         rgba(187, 134, 252, 0.08) 0%,
         rgba(3, 218, 198, 0.04) 100%

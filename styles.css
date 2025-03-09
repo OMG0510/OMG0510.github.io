@@ -43,6 +43,7 @@ body {
     border-radius: 50%;
     border: 5px solid white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background:#9da7b1;
 }
 
 /* Typewriter Effect */
@@ -207,6 +208,10 @@ body.dark-mode .navbar-brand {
 
 body.dark-mode .hero-section{
     background:rgba(30, 30, 30, 0.8) ;
+}
+
+body.dark-mode .profile-img{
+    background:#2d2b2b ;
 }
 
 body.dark-mode .project-card {

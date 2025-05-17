@@ -777,3 +777,69 @@ body.dark-mode .project-card::before {
 .delay-2 { animation-delay: 0.4s; }
 .delay-3 { animation-delay: 0.6s; }
 .delay-4 { animation-delay: 0.8s; }
+
+/* Dark Mode Fixes for Projects and Contact Sections */
+
+/* Fix for project cards in dark mode */
+body.dark-mode .project-card {
+    background: var(--card-background);
+}
+
+body.dark-mode .project-card::before {
+    background: linear-gradient(315deg, rgba(187, 134, 252, 0.8), rgba(3, 218, 198, 0.8));
+}
+
+/* Fix for project cards text and badges */
+body.dark-mode .card-title {
+    color: var(--text-color);
+}
+
+body.dark-mode .project-card .card-body {
+    color: var(--text-color);
+}
+
+body.dark-mode .tech-badge {
+    background: rgba(187, 134, 252, 0.3);
+    color: var(--text-color);
+}
+
+body.dark-mode .project-link {
+    color: var(--secondary-color);
+}
+
+/* Fix for contact section in dark mode */
+body.dark-mode .contact {
+    background: linear-gradient(135deg, #2D2D2D 0%, #121212 100%);
+}
+
+body.dark-mode .contact::before {
+    background: rgba(187, 134, 252, 0.1);
+}
+
+/* Fix for skill items in dark mode */
+body.dark-mode .skill-item {
+    background: var(--card-background);
+}
+
+body.dark-mode .skill-item::before {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Fix for project links */
+.project-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+body.dark-mode .project-card:hover .project-link {
+    color: white;
+}

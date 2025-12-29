@@ -975,3 +975,58 @@ body.dark-mode .project-card:hover .project-link {
         font-size: 1.5rem;
     }
 }
+
+/* ===== Extracted from inline <style> (NO changes) ===== */
+
+/* Resume button fix styles */
+.resume-btn {
+    position: relative !important;
+    z-index: 9999 !important; 
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    padding: 12px 24px !important;
+    transition: all 0.3s ease !important;
+    overflow: visible !important;
+    text-decoration: none !important;
+}
+
+.hero-section {
+    position: relative;
+    overflow: visible !important;
+}
+
+.hero-section .container,
+.hero-section .row,
+.hero-section .col-lg-6 {
+    position: relative;
+    overflow: visible !important;
+    z-index: 1;
+    pointer-events: auto !important;
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* Alternative resume download */
+.alt-resume-btn {
+    position: fixed;
+    bottom: 80px; 
+    right: 20px;
+    background: #ff4d5a;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 10000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    display: block;
+    text-decoration: none;
+}
+
+.alt-resume-btn:hover {
+    background: #e43b49;
+    color: white;
+    text-decoration: none;
+}

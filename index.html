@@ -5,65 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om Gaikwad - Portfolio</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <style>
-        /* Resume button fix styles */
-        .resume-btn {
-            position: relative !important;
-            z-index: 9999 !important; 
-            pointer-events: auto !important;
-            cursor: pointer !important;
-            display: inline-block !important;
-            padding: 12px 24px !important;
-            transition: all 0.3s ease !important;
-            overflow: visible !important;
-            text-decoration: none !important;
-        }
-
-        .hero-section {
-            position: relative;
-            overflow: visible !important;
-        }
-
-        .hero-section .container,
-        .hero-section .row,
-        .hero-section .col-lg-6 {
-            position: relative;
-            overflow: visible !important;
-            z-index: 1;
-            pointer-events: auto !important;
-        }
-
-        .resume-btn:hover {
-            transform: translateY(-3px) !important;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
-        }
-        
-        /* Alternative resume download */
-        .alt-resume-btn {
-            position: fixed;
-            bottom: 80px; 
-            right: 20px;
-            background: #ff4d5a;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            z-index: 10000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            display: block; /* Always visible as a backup */
-            text-decoration: none;
-        }
-        
-        .alt-resume-btn:hover {
-            background: #e43b49;
-            color: white;
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -389,118 +336,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
-
-        // Dark Mode Toggle
-        const modeToggle = document.getElementById('modeToggle');
-        const body = document.body;
-
-        function toggleMode() {
-            body.classList.toggle('dark-mode');
-            const isDark = body.classList.contains('dark-mode');
-            modeToggle.innerHTML = `<i class="fas ${isDark ? 'fa-sun' : 'fa-moon'}"></i>`;
-            localStorage.setItem('darkMode', isDark);
-        }
-
-        // Check for saved preference
-        if (localStorage.getItem('darkMode') === 'true') {
-            toggleMode();
-        }
-
-        modeToggle.addEventListener('click', toggleMode);
-
-        // Active link highlighting
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-            
-            // Show/hide scroll to top button
-            const scrollTop = document.getElementById('scrollTop');
-            if (window.scrollY > 300) {
-                scrollTop.classList.add('show');
-            } else {
-                scrollTop.classList.remove('show');
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const href = this.getAttribute('href');
-                if (href === '#') return;
-                
-                const offsetTop = document.querySelector(href).offsetTop;
-                
-                window.scrollTo({
-                    top: offsetTop - 70,
-                    behavior: 'smooth'
-                });
-                
-                // Close navbar collapse on mobile when clicked
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse.classList.contains('show')) {
-                    navbarCollapse.classList.remove('show');
-                }
-            });
-        });
-
-        // Scroll to top functionality
-        document.getElementById('scrollTop').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Enhanced Typewriter Effect
-        const typewriterElement = document.querySelector('.typewriter');
-        const typewriterText = typewriterElement.textContent;
-        typewriterElement.textContent = '';
-        
-        let i = 0;
-        const typeSpeed = 100;
-        
-        function type() {
-            if (i < typewriterText.length) {
-                typewriterElement.textContent += typewriterText.charAt(i);
-                i++;
-                setTimeout(type, typeSpeed);
-            }
-        }
-        
-        // Start typing when element is in view
-        window.addEventListener('load', () => {
-            setTimeout(type, 1000);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
